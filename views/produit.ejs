@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title> <%=pageTitle%> </title>
+  
+<link rel = "stylesheet" type ="text/css" href="../public/style.css">
+    
+</head>
+<body>  
+    <%-include('./partials/menu')%>
+<div>
+    <h2>Les barres</h2>
+    <ul>
+        <% for (p of prod)
+            { %>
+                <li><%=p.brand %></li>
+        <% } %>
+    </ul>
+</div>
+<div>
+    <h2>La liste de compagnies</h2>
+    <ol>
+        <% for (p of prod)
+            { %>
+                <li><%=p.compagnie %></li>
+        <% } %>
+    </ol>
+</div>
+<%-include('./partials/footer')%>
+</body> 
+</html>

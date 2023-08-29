@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title> <%=pageTitle%> </title>
+  
+<link rel = "stylesheet" type ="text/css" href="../public/style.css">
+    
+</head>
+<body>  
+    <%-include('./partials/menu')%>
+<div>
+<h1><%=pageTitle%></h1>
+</div>
+<div>
+    <h2>La liste de Personnes</h2>
+    <ol>
+        <% for (p of list)
+            { %>
+                <li><%=p.nom %> - <span><%=p.prenom %></span></li>
+        <% } %>
+    </ol>
+</div>
+</body> 
+</html>

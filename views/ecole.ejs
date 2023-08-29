@@ -1,0 +1,43 @@
+<head>
+  <title>Labo 03 HERRERA German</title>
+</head>
+<body>
+  <div id = "test" align = "center">
+      <form>
+          <table>
+              <tr>
+                  <td><select name = "codechoisi" id="codechoisi">
+                    <% for (c of codes)  { %>
+                     <option><%= c.code %> </option>        
+                 <% } %> 
+                  </select></td>
+                  <td> <input type="button" id="boutton2" name = "ok" value="ok"></td> 
+              </tr>
+              <tr>
+                  <td>Nom </td>
+                  <td><input type="text" id = "nom" value="   "></td> 
+              </tr>
+              <tr>
+                  <td>Prénom</td>
+                  <td><input type="text" id = "prenom" value="  "></td> 
+              </tr>
+              <tr>
+                  <td><input type="button" id = "reset" value="reset">
+                  <input type="button" id = "insert" value="insert"></td> 
+                  <td><input type="button" id = "update" value="update">
+                  <input type="button" name = "delete" value="delete"></td>
+              </tr>
+          </table>
+      </form>
+
+      <h3> Recherche dans nom, prenom et code</h3>
+      <div id="form">
+          <form method="post"  enctype="multipart/form-data"> 
+              <input type="text" name="user_query" placeholder="Recherche utilisateur"/ > 
+              <input type="submit" name="search" value="recherche" />
+          </form>
+      </div>    
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../public/AjaxScript.js"></script>
+</body>

@@ -1,0 +1,6 @@
+# See auto gestion project
+
+# dependencies
+/node_modules
+/.wwebjs_auth
+/.wwebjs_cache
